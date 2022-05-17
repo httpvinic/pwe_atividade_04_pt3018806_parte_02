@@ -7,102 +7,65 @@
     <!-- configura a codificação de caracteres do navegador para o UTF-8-->
     <link rel="shortcut icon" href="Imagens/favicon.ico" type="image/x-icon">
     <!-- Adiciona o ícone de aba de navegador-->
-    <title>HOME - IFSP - Pirituba</title>
+    <link rel="stylesheet" href="css/conteudo.css">
+    <!-- Estilos para o conteúdo da tela principal-->
+    <title>HOME - IFSP - Pirituba - CSS - Parte 01</title>
     <!-- Adiciona o título na aba do navegador-->
     <script src="js/disabling.js"></script>
 </head>
 
 <body>
 
-    <header id="cabecalho">
-        <!-- Indica o cabeçalho do nosso documento-->
+    <body>
 
-        <nav>
-            <object width="100%" height="65px" data="menu.html"></object>
-        </nav>
+        <header id="cabecalho">
+            <!-- Indica o cabeçalho do nosso documento-->
 
-        <img src="Imagens/Logo.jpg" alt=" " />
-        <!-- anexa imagem e texto alternativo-->
+            <nav>
+                <object width="100%" height="200px" data="menu.html"></object>
+            </nav>
 
-        <nav>
-            <!-- Indica que o conteúdo é composto de links de navegação-->
-            <p><b>Cursos</b></p>
-            <ul>
-                <!-- Estrutura de lista não ordenada -->
-                <li>
-                    <!-- Item de lista -->
-                    <a href="ads.html">Análise e Desenvolvimento de Sistemas</a>
-                </li>
-                <li>
-                    <a href="#">Engenharia de Produção</a>
-                </li>
-                <li>
-                    <a href="#">Gestão em Tecnologia da Informação</a>
-                </li>
-                <li>
-                    <a href="#">Letras</a>
-                </li>
-                <li>
-                    <a href="#">Gestão Pública</a>
-                </li>
-            </ul>
-        </nav>
+        </header>
 
-    </header>
-
-    <main>
         <!-- indica que é o conteúdo principal dessa página -->
+        <main id="conteudo">
 
-        <aside>
-            <!-- indica que é um conteúdo a parte do princial, auxiliar-->
-            <p><b>Eventos</b></p>
-            <figure>
-                <img src="Imagens/SEJA_RARO.jpg" alt="Palestra Seja Raro" width="50%" height="50%">
-                <figcaption>Aniversário do IFSP - Pirituba - Palestra Augusto Aielo</figcaption>
-            </figure>
-        </aside>
+            <aside>
+                <!-- indica que é um conteúdo a parte do princial, auxiliar-->
+                <h1>Acontece no IFSP!</h1>
+                <figure>
+                    <img src="Imagens/SEJA_RARO.jpg" alt="Palestra Seja Raro" width="50%" height="50%">
+                    <figcaption>Aniversário do IFSP - Pirituba - Palestra Augusto Aielo</figcaption>
+                </figure>
+            </aside>
 
+            <section>
+                <h1>
+                    Conheça os desafios de inovação
+                </h1>
+                <div class="videoWrapper">
+                    <p align="center">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/5g5LQe3m8Po" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </p>
+                </div>
+            </section>
 
-        <section>
-            <!-- Indica que é uma seção/parte do documento-->
-            <h1>
-                Sobre a Biblioteca
-            </h1>
+        </main>
 
-            <article>
-                <!-- Indica que o conteúdo é completo, ou seja, não depende d eoutros trechos do documento para ter significado -->
-                <img src="Imagens/library.jpeg" alt="Biblioteca" />
-                <h2>Conheça os novos títulos disponíveis na nossa biblioteca</h2>
-                <h6>
-                    <!-- Título de terceiro nível -->
-                    Publicado: Quarta-feira, 14 de agosto de 2019
-                </h6>
-            </article>
-        </section>
-        <section>
-            <h1>
-                Conheça o SUAP
-            </h1>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/yVbOcB1ryh0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </section>
+        <footer>
+            <br><br>
+            <object width="100%" height="200px" data="rodape.html"></object>
 
-    </main>
+        </footer>
 
-    <footer>
-        <br><br>
-        <a href="#cabecalho"><img src="Imagens/MoveTop.png" width="41" height="43" title="Mover para o topo" alt="Mover para o topo"></a>
-        <object width="100%" height="200px" data="rodape.html"></object>
+        <!--INÍCIO: Utilização do Firebase!-->
+        <!--Não copiar este trecho se você não utiliza o Firebase!-->
+        <script type="module">
+            import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.1/firebase-app.js"; const firebaseConfig = { apiKey: "AIzaSyDcr6AjxgAo2zFWohakGZVYvBQNOugOHmc", authDomain: "pwe-redes.firebaseapp.com", projectId: "pwe-redes", storageBucket: "pwe-redes.appspot.com",
+            messagingSenderId: "1014309916640", appId: "1:1014309916640:web:4985ec3beb82b7ebb72585" }; const app = initializeApp(firebaseConfig);
+        </script>
+        <!--FIM: Utilização do Firebase!-->
 
-    </footer>
-
-    <!--INÍCIO: Utilização do Firebase!-->
-    <!--Não copiar este trecho se você não utiliza o Firebase!-->
-    <script type="module">
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.2/firebase-app.js"; const firebaseConfig = { apiKey: "AIzaSyDcr6AjxgAo2zFWohakGZVYvBQNOugOHmc", authDomain: "pwe-redes.firebaseapp.com", projectId: "pwe-redes", storageBucket: "pwe-redes.appspot.com",
-        messagingSenderId: "1014309916640", appId: "1:1014309916640:web:9871f8070007ac4db72585" }; const app = initializeApp(firebaseConfig);
-    </script>
-    <!--FIM: Utilização do Firebase!-->
-
-</body>
+    </body>
 
 </html>
